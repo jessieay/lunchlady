@@ -1,4 +1,4 @@
 Lunchlady::Application.routes.draw do
-  root :to => 'Clearance::Sessions#new'
-  resources :locations, only: [:index, :show]
+  root :to => 'locations#index'
+  resources :locations, only: [:index, :show], defaults: { format: :json }
 end
